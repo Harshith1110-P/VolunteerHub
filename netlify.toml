@@ -1,0 +1,15 @@
+[build]
+  # Tell Netlify that the frontend project is inside the client folder
+  base = "client"
+  
+  # The directory that contains the build output (HTML, JS, CSS)
+  publish = "dist"
+  
+  # The build command to compile the React/Vite app
+  command = "npm run build"
+
+# Redirect rule to handle React Router client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
